@@ -32,6 +32,7 @@ body {
 }
 
 body {
+  font-family: var(--ff);
   background-color: var(--clr-primary-1);
   width: calc(100% - (clamp(1px, 11vw, 219px) * 2));
   margin: auto;
