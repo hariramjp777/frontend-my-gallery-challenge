@@ -9,6 +9,8 @@
   --clr-secondary: hsla(160, 2%, 31%, 1);
   --clr-tertiary: hsla(229, 19%, 77%, 1);
   --clr-gray: hsla(0, 0%, 74%, 1);
+  --clr-primary-2-hover: hsla(0, 0%, 81%, 1);
+  --clr-gray-hover: hsla(0, 1%, 59%, 1);
   --magic: 11vw;
 }
 
@@ -93,7 +95,6 @@ header .data {
 
 header .data li {
   flex-basis: 10rem;
-  /* height: 6.7rem; */
   height: min(16.8vw, 6.7rem);
   display: flex;
   flex-direction: column;
@@ -103,6 +104,7 @@ header .data li {
   border-radius: 1.2rem;
   font-size: min(3vw, 1.2rem);
   color: var(--clr-gray);
+  transition: background-color 0.4s ease;
 }
 
 header .data li:nth-child(2) {
@@ -110,10 +112,14 @@ header .data li:nth-child(2) {
 }
 
 header .data li .number {
-  /* font-size: 1.8rem; */
   font-size: min(4.3vw, 1.8rem);
   color: var(--clr-secondary);
   margin-bottom: 0.31rem;
+}
+
+header .data li:hover {
+  background-color: var(--clr-primary-2-hover);
+  color: var(--clr-gray-hover);
 }
 
 main {
