@@ -1,0 +1,39 @@
+:root {
+  --ff: "Montserrat", sans-serif;
+  --fw-normal: 500;
+  --fw-medium: 600;
+  --fw-bold: 700;
+  --clr-primary-1: hsla(0, 0, 100, 1);
+  --clr-primary-2: hsla(0, 0, 90, 1);
+  --clr-primary-3: hsla(0, 0, 66, 1);
+  --clr-secondary: hsla(160, 2, 31, 1);
+  --clr-tertiary: hsla(229, 19, 77, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  position: relative;
+  font-size: 62.5%;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background-color: var(--clr-primary-1);
+  width: calc(100% - (clamp(1px, 11vw, 219px) * 2));
+  margin: auto;
+  padding: 4.1rem 0;
+}
