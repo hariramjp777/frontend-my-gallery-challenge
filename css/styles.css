@@ -9,6 +9,7 @@
   --clr-secondary: hsla(160, 2%, 31%, 1);
   --clr-tertiary: hsla(229, 19%, 77%, 1);
   --clr-gray: hsla(0, 0%, 74%, 1);
+  --magic: 11vw;
 }
 
 * {
@@ -35,7 +36,7 @@ body {
 body {
   font-family: var(--ff);
   background-color: var(--clr-primary-1);
-  width: calc(100% - (clamp(1px, 11vw, 219px) * 2));
+  width: calc(100% - (clamp(1px, var(--magic), 219px) * 2));
   margin: auto;
   padding: 4.1rem 0;
 }
@@ -116,11 +117,14 @@ main {
 
 main .img-container {
   display: flex;
+  overflow: hidden;
+  border-radius: 1.2rem;
 }
 
-main .img-container img {
+main .img-container > img {
   width: 100%;
-  border-radius: 1.2rem;
+  border-radius: inherit;
+  transition: transform 0.6s ease;
 }
 
 main .img-container:nth-child(2) {
@@ -136,8 +140,25 @@ main .img-container:nth-child(4) {
   grid-row: 2/4;
 }
 
+main .img-container > img:hover {
+  transform: scale(1.05);
+}
+
 @media (max-width: 239px) {
   header .profile h1 {
     font-size: 1.84rem;
+  }
+}
+
+@media (max-width: 359px) {
+  main .img-container,
+  header .data li {
+    border-radius: 0.6rem;
+  }
+}
+
+@media (max-width: 499px) {
+  :root {
+    --magic: 5vw;
   }
 }
