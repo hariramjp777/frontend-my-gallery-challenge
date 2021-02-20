@@ -172,19 +172,25 @@ footer a:hover {
   header .profile h1 {
     font-size: 1.84rem;
   }
-  footer p {
-    display: flex;
-    flex-direction: column;
-  }
-  footer span {
-    margin: 0.3rem 0;
-  }
 }
 
 @media (max-width: 359px) {
   main .img-container,
   header .data li {
     border-radius: 0.6rem;
+  }
+  footer p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 300px) {
+  footer p {
+    display: flex;
+    flex-direction: column;
+  }
+  footer span {
+    margin: 0.3rem 0;
   }
 }
 
