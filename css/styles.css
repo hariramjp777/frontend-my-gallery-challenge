@@ -33,6 +33,14 @@ body {
   min-height: 100%;
 }
 
+ul {
+  list-style: none;
+}
+
+img {
+  user-select: none;
+}
+
 body {
   font-family: var(--ff);
   background-color: var(--clr-primary-1);
@@ -80,7 +88,6 @@ header .profile p {
 
 header .data {
   display: flex;
-  list-style: none;
   justify-content: center;
 }
 
